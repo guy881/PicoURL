@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+   <title>Lista skróconych linków</title>
+   <meta charset="utf-8" />
+</head>
+<body>
+   <h1>Lista skróconych linków:</h1>
+   <ol>
+      {% for link in linkbase %}
+	 <li> <a href="http://127.0.0.1:5000/{{ link }}">http://127.0.0.1:5000/{{ link }}</a> <a href="{{linkbase[link]}}">{{linkbase[link]}}</a>
+      {% endfor %}
+   </ol>
+   <div>
+      <a href="http://127.0.0.1:5000/">Powrót</a>
+   </div>
+</body>
+</html>
